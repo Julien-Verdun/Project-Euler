@@ -2,10 +2,16 @@
 
 
 def digital_sum(number):
+    """
+    This function calculates the sum of digits of a given number.
+    """
     return sum([int(nb) for nb in list(str(number))])
 
 
 def powerful_digit_sum():
+    """
+    This function calculates the maximal sum of power number. 
+    """
     max_sum = 1
     max_i, max_j = 100, 100
     for i in range(100):

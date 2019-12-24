@@ -2,6 +2,9 @@
 
 
 def frac(n):
+    """
+    This function calculates, for a given integer n, the fraction 1/2(n-1)
+    """
     if n > 1:
         return 1/(2+frac(n-1))
     else:
@@ -9,10 +12,17 @@ def frac(n):
 
 
 def square_root_approx(n):
+    """
+    This function returns, for a given integer n, the result of the operation 1+n**0.5
+    """
     return 1 + frac(n)
 
 
 def square_root_convergents(n):
+    """
+    This function calculates every number of the sequence defined by frac function,
+    and count the number of results that have a denominator with more digit than the numerator.
+    """
     i = 0
     nb_frac = 0
     num = 1
@@ -28,3 +38,5 @@ def square_root_convergents(n):
 
 
 print(square_root_convergents(1000))
+
+# Result 153
